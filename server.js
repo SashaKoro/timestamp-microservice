@@ -1,9 +1,11 @@
-const hbs = require('hbs');
 const express = require('express');
+const path = require('path');
 
 let app = express();
 const { dateChecker } = require('./dateChecker');
 const port = process.env.PORT || 2000;
+
+app.use(express.static('public'));
 
 app.get('/:date', (req, res) => {
   let incomingDate = req.params.date;
@@ -15,7 +17,7 @@ app.get('/:date', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.render( 'intro.hbs');
+  res.sendFile(path.join(__dirname + '/public/main.html'));
 });
 
 app.listen(port, () => {
