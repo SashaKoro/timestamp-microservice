@@ -5,7 +5,7 @@ const dateChecker = (date) => {
 
   if (numDate) {
     dateTime = new Date(numDate * 1000).toDateString();
-    unix = decodedDate;
+    unix = numDate;
   } else {
     dateTime = new Date(date).toDateString();
     unix = (new Date(dateTime).getTime() / 1000);
