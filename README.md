@@ -8,9 +8,9 @@
 
 ### Sample Calls:
 
-https://stormy-island-13320.herokuapp.com/245013760
+https://timestamp-microservice2017.herokuapp.com/245013760
 
-https://stormy-island-13320.herokuapp.com/Oct%2006,%201977
+https://timestamp-microservice2017.herokuapp.com/Oct%2006,%201977
 
 ### Response:
 
