@@ -1,10 +1,16 @@
 const hbs = require('hbs');
-
 const express = require('express');
+
 let app = express();
+const { dateChecker } = require('./dateChecker');
+
 
 app.get('/:date', (req, res) => {
-  let date = req.params.date;
+  let incomingDate = req.params.date;
+  let date = dateChecker(incomingDate);
+  if (!date) {
+    return res.status(400).send('error');
+  }
   res.send(date);
 });
 
